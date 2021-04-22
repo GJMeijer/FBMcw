@@ -8,11 +8,11 @@
 server <- function(input, output) {
 
   #create dataframe for strain
-  epsr0rel <- reactive({
+  epsr0rel <- shiny::reactive({
     generate_strainrange(input$dr[1], input$dr[2], input$betaF, input$betat, margin = 1.5)
   })
   #add FBMc and FBMcw predictions to dataframe with strains
-  deps <- reactive({
+  deps <- shiny::reactive({
     data.frame(
       epsr0rel = epsr0rel(),
       kk_fbmc = calc_kk_fbmc(epsr0rel(), input$dr[1], input$dr[2], input$betaF, input$betat, input$betaphi),
@@ -20,12 +20,12 @@ server <- function(input, output) {
     )
   })
   #create strain plot
-  output$p_traces <- renderPlotly({
+  output$p_traces <- plotly::renderPlotly({
     plotly_app_kkfbmc_kkfbmcw(deps())
   })
 
   #create all load sharing rules
-  dm2 <- reactive({
+  dm2 <- shiny::reactive({
     generate_loadsharingrules(
       betat = input$betat,
       betaE = input$betaE,
@@ -34,7 +34,7 @@ server <- function(input, output) {
     )
   })
   #create FBMc and FBMcw predictions for all load sharing assumptions
-  dm <- reactive(
+  dm <- shiny::reactive(
     cbind(
       dm2(),
       kk_fbmc = calc_kku_fbmc(input$dr[1], input$dr[2], dm2()$betaF, input$betat, input$betaphi),
@@ -42,11 +42,11 @@ server <- function(input, output) {
     )
   )
   #create range of betaF values
-  dbetaF <- reactive({
+  dbetaF <- shiny::reactive({
     generate_loadsharingrange(betaF = dm2()$betaF)
   })
   #create FBMc and FBMcw predictions for all betaF values
-  dF <- reactive({
+  dF <- shiny::reactive({
     data.frame(
       betaF = dbetaF(),
       kk_fbmc = calc_kku_fbmc(input$dr[1], input$dr[2], dbetaF(), input$betat, input$betaphi),
@@ -54,12 +54,12 @@ server <- function(input, output) {
     )
   })
   #create betaF plot
-  output$p_loadsharing <- renderPlotly({
+  output$p_loadsharing <- plotly::renderPlotly({
     plotly_app_loadsharingtraces(dF(), dm())
   })
 
   #root area ratio distribution parameter phir0
-  phir0 <- reactive({
+  phir0 <- shiny::reactive({
     calc_phir0(
       input$phirt / 100,  #percentage to fraction
       input$dr[1],
@@ -68,7 +68,7 @@ server <- function(input, output) {
     )
   })
   #claculate WWMc solution
-  cru_wwmc <- reactive({
+  cru_wwmc <- shiny::reactive({
     calc_cru_wwmc(
       input$dr[1],
       input$dr[2],
@@ -80,12 +80,12 @@ server <- function(input, output) {
     )
   })
   #plot cohesion predictions
-  output$p_cohesion <- renderPlotly({
+  output$p_cohesion <- plotly::renderPlotly({
     plotly_app_cohesionpredictions(dm(), cru_wwmc())
   })
 
   #create plot
-  output$p_classtraces <- renderPlotly({
+  output$p_classtraces <- plotly::renderPlotly({
     plotly_stackedtrace_cr_fbm_fbmw(
       input$dr[1],
       input$dr[2],

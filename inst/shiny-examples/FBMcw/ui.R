@@ -5,20 +5,20 @@
 #################
 
 #make UI
-ui <- navbarPage(
+ui <- shiny::navbarPage(
   "FBMc/FBMcw",
 
-  tabPanel(
+  shiny::tabPanel(
     "Analysis",
 
     #FIRST ROW - MOBILISATION
-    fluidRow(
+    shiny::fluidRow(
       h3('Plot 1: Mobilisation of reinforcement in FBMc/FBMcw', align="center")
     ),
-    fluidRow(
-      column(4,
-        wellPanel(
-          sliderInput(
+    shiny::fluidRow(
+      shiny::column(4,
+        shiny::wellPanel(
+          shiny::sliderInput(
             "dr",
             label = HTML(paste0("Root diameter range (d", tags$sub("r,min"), " - d", tags$sub("r,max"), ') [mm]', sep='')),
             min = 0.1,
@@ -26,7 +26,7 @@ ui <- navbarPage(
             max = 10,
             step = 0.1
           ),
-          sliderInput(
+          shiny::sliderInput(
             "betaphi",
             label = HTML(paste0("Root area ratio distribution power coefficient (\u03b2", tags$sub("\u03c6"), ")", sep='')),
             min = -2,
@@ -34,7 +34,7 @@ ui <- navbarPage(
             max = 2,
             step = 0.1
           ),
-          sliderInput(
+          shiny::sliderInput(
             "betat",
             label = HTML(paste0("Tensile strength power coefficient (\u03b2", tags$sub("t"), ")", sep='')),
             min = -2,
@@ -42,7 +42,7 @@ ui <- navbarPage(
             max = 2,
             step = 0.1
           ),
-          sliderInput(
+          shiny::sliderInput(
             "betaF",
             label = HTML(paste0("Load sharing parameter (\u03b2", tags$sub("F"), ")", sep='')),
             min = -2,
@@ -50,7 +50,7 @@ ui <- navbarPage(
             max = 3,
             step = 0.1
           ),
-          sliderInput(
+          shiny::sliderInput(
             "kappa",
             label = "Weibull survival shape parameter (\u03BA)",
             min = 0.1,
@@ -60,19 +60,19 @@ ui <- navbarPage(
           ),
         )
       ),
-      column(8,
-        plotlyOutput("p_traces")
+      shiny::column(8,
+        plotly::plotlyOutput("p_traces")
       )
     ),
 
     #SECOND ROW: LOAD SHARING PREDICTIONS
-    fluidRow(
+    shiny::fluidRow(
       h3('Plot 2: Comparison of load sharing rules', align="center")
     ),
-    fluidRow(
-      column(4,
-        wellPanel(
-          sliderInput(
+    shiny::fluidRow(
+      shiny::column(4,
+        shiny::wellPanel(
+          shiny::sliderInput(
             "betaE",
             label = HTML(paste0("Root stiffess power coefficient (\u03b2", tags$sub("E"), ")", sep='')),
             min = -2,
@@ -80,7 +80,7 @@ ui <- navbarPage(
             max = 2,
             step = 0.1
           ),
-          sliderInput(
+          shiny::sliderInput(
             "betaL",
             label = HTML(paste0("Root length power coefficient (\u03b2", tags$sub("L"), ")", sep='')),
             min = -2,
@@ -90,19 +90,19 @@ ui <- navbarPage(
           )
         )
       ),
-      column(8,
-        plotlyOutput("p_loadsharing")
+      shiny::column(8,
+        plotly::plotlyOutput("p_loadsharing")
       )
     ),
 
     #THIRD ROW: ABSOLUTE VALUES
-    fluidRow(
+    shiny::fluidRow(
       h3("Plot 3: Peak root reinforcement predictions ('root cohesion')", align="center")
     ),
-    fluidRow(
-      column(4,
-        wellPanel(
-          sliderInput(
+    shiny::fluidRow(
+      shiny::column(4,
+        shiny::wellPanel(
+          shiny::sliderInput(
             "phirt",
             label = HTML(paste0("(Total) root area ratio (\u03c6", tags$sub("r,t"), ") [%]", sep='')),
             min = 0.0,
@@ -110,7 +110,7 @@ ui <- navbarPage(
             max = 2.5,
             step = 0.01
           ),
-          sliderInput(
+          shiny::sliderInput(
             "tru0",
             label = HTML(paste0("Root tensile strength in root with 1 mm diameter (t", tags$sub("r,u,0"), ") [MPa]", sep='')),
             min = 0,
@@ -118,7 +118,7 @@ ui <- navbarPage(
             max = 100,
             step = 0.1
           ),
-          sliderInput(
+          shiny::sliderInput(
             "k",
             label = "WWM root orientation factor k'",
             min = 0,
@@ -128,19 +128,19 @@ ui <- navbarPage(
           )
         )
       ),
-      column(8,
-        plotlyOutput("p_cohesion")
+      shiny::column(8,
+        plotly::plotlyOutput("p_cohesion")
       )
     ),
 
     #FOURTH ROW: DISCRETISATION EFFECT
-    fluidRow(
+    shiny::fluidRow(
       h3("Plot 4: Effect of using discrete diameter classes (FBM and FBMw models)", align="center")
     ),
-    fluidRow(
-      column(4,
-        wellPanel(
-          sliderInput(
+    shiny::fluidRow(
+      shiny::column(4,
+        shiny::wellPanel(
+          shiny::sliderInput(
             "nc",
             label = HTML(paste0("Number of discrete diameter classes (n", tags$sub("c"), ")", sep='')),
             min = 1,
@@ -150,15 +150,15 @@ ui <- navbarPage(
           )
         )
       ),
-      column(8,
-        plotlyOutput("p_classtraces")
+      shiny::column(8,
+        plotly::plotlyOutput("p_classtraces")
       )
     )
   ),
 
-  tabPanel(
+  shiny::tabPanel(
     "Documentation",
-    withMathJax(),
-    includeMarkdown('www/FBMc_documentation.rmd')
+    shiny::withMathJax(),
+    shiny::includeMarkdown('www/FBMc_documentation.rmd')
   )
 )
