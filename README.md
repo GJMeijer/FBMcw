@@ -57,7 +57,7 @@ The following functions are available to calculat the current root reinforcement
 - `calc_kk_fbmc`: calculate the reduction factor in peak root reinforcement (`k''`) according to the FBMc model at each value of strain
 - `calc_kk_fbmcw`: calculate the reduction factor in peak root reinforcement (`k''`) according to the FBMcw model at each value of strain
 - `calc_cr_fbm`: calculate the current root reinforcement according to the FBM model at each value of strain (discrete root classes)
-- `calc_cf_fbmw`: calculate the current root reinforcement according to the FBMw model at each value of strain (discrete root classes)
+- `calc_cr_fbmw`: calculate the current root reinforcement according to the FBMw model at each value of strain (discrete root classes)
 
 To generate suitable ranges of strains, you could use 
 
