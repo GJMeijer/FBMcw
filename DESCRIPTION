@@ -1,0 +1,18 @@
+Package: FBMcw
+Type: Package
+Title: Generic fibre bundle model for soil reinforcement by plant roots
+Version: 0.1.0
+Author: Gerrit Meijer
+Maintainer: Gerrit Meijer <gjm36@bath.ac.uk>
+Description: This package contains all functions to calculate root-reinforcement 
+    according to the Wu/Waldron model (WWM), fibre bundle models with discrete
+    root diameter classes (FBM, FBMw) and fibre bundle models with continuous,
+    power-law root distributions (FBMc, FBMcw). All functions are provided both
+    added Weibull survival functions ('w') or not.
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+Imports:
+    plotly,
+	shiny
+RoxygenNote: 7.1.1
