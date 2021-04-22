@@ -1,5 +1,7 @@
 # FBMcw
+
 Generic fibre bundle models for soil reinforcement by plant roots
+
 April 2021 - Gerrit Meijer (<gjm36@bath.ac.uk>)
 
 This R package contains:
