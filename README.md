@@ -19,14 +19,14 @@ This R package contains:
 
 ## Running the app
 
-To run the included app, type `FBMcw::run_app()` in the R command line. This will open an interactive App in your default browser. This app relies on R continuing to run in the background for any computations.
+To run the included app, type `FBMcw::run_app()` in the R console. This will open an interactive App in your default browser. This app relies on R continuing to run in the background for any computations.
 
 This app shows an interactive version of the various fibre bundle models, capable of showing how root reinforcement predictions change when altering input parameters in real time. This app is constructed using the R package `shiny`.
 
 
 ## Using calculations functions
 
-For each of the following functions, a help page can be opened by typing `?function_name` in the R console, where `function_name` is the name of the function of interest.
+For each of the following functions, a help page can be opened by typing `?function_name` in the R console, where `function_name` is the name of the function you want to see the documentation of.
 
 
 ### Peak reinforcements (continuous models)

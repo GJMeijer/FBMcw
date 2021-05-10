@@ -4,7 +4,7 @@
 \alias{run_app}
 \title{Run a Shiny app that is part of this package}
 \usage{
-run_app(app_name, package_name = "FBMcw")
+run_app(app_name = "FBMcw", package_name = "FBMcw")
 }
 \arguments{
 \item{app_name}{name of the application}

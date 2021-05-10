@@ -9,7 +9,7 @@ Description: This package contains all functions to calculate root-reinforcement
     root diameter classes (FBM, FBMw) and fibre bundle models with continuous,
     power-law root distributions (FBMc, FBMcw). All functions are provided both
     added Weibull survival functions ('w') or not.
-License: GPL-3
+License: file LICENSE
 Encoding: UTF-8
 LazyData: true
 Imports:
