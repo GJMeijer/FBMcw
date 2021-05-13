@@ -1,23 +1,30 @@
 # FBMcw
 
-Generic fibre bundle models for soil reinforcement by plant roots
+Generic fibre bundle models for soil reinforcement by plant roots (FBMc/FBMcw)
 
-April 2021 - Gerrit Meijer (<gjm36@bath.ac.uk>)
+v0.1.0 - May 2021 - Gerrit Meijer (<gjm36@bath.ac.uk>)
+
+
+## Running the app online
+
+An online app, showcasing the capabilities of the generic fibre bundle model formulation, is currently hosted through Shinyapps.io: <https://gjmeijer.shinyapps.io/FBMcw/>
+
+
+## Package and installation
 
 This R package contains:
 
 - an interactive app (using R Shiny), interactively showing how root reinforcement predictions change when varying input parameters.
 - all functions required to make root reinforcement calculations according to the various fibre bundle models
 
-
-## Installation
+To install this package on your local machine:
 
 1. Open R. (If not installed, I recommend installing RStudio (free software) that can be downloaded from https://www.rstudio.com/products/rstudio/download/)
 2. If not already installed, install the `devtools` package by typing `install.packages("devtools")` in the R console. This package allows you to interact with R packages hosted on GitHub (among many other things).
 3. Install the `FBMcw` package by typing `devtools::install_github("GJMeijer/FBMcw")` in the R console
 
 
-## Running the app
+## Running the app offline
 
 To run the included app, type `FBMcw::run_app()` in the R console. This will open an interactive App in your default browser. This app relies on R continuing to run in the background for any computations.
 
@@ -29,7 +36,7 @@ This app shows an interactive version of the various fibre bundle models, capabl
 For each of the following functions, a help page can be opened by typing `?function_name` in the R console, where `function_name` is the name of the function you want to see the documentation of.
 
 
-### Peak reinforcements (continuous models)
+### Peak reinforcements (continuous diameters)
 
 The `RBMcw` package contains a number of functions to calculate peak root reinforcements, assuming continuous power-law distributions of the root area ratio and root tensile strength:
 
@@ -38,7 +45,7 @@ The `RBMcw` package contains a number of functions to calculate peak root reinfo
 - `calc_kku_fbmcw`: calculate the reduction factor in peak root reinforcement (`k''`) according to the FBMcw model. Multiply the result by the results from `calc_cru_wwmc` to calculate the peak reinforcement according to the FBMcw.
 
 
-### Peak reinforcements (discrete models)
+### Peak reinforcements (discrete diameter classes)
 
 The package contains a number of functions to calculate peak root reinforcements, assuming root are binned in discrete classes:
 
@@ -50,6 +57,7 @@ To discretise a continuous distribution of roots into a number of discrete class
 
 - `discretise_rootclasses`: takes a range of roots and splits it into a specified number of equal-width root diameter classes, assuming power-law distributions for root area ratio and root tensile strength.
 
+
 ### Mobilisation of root reinforcement
 
 The following functions are available to calculat the current root reinforcement as function of strain:
@@ -59,7 +67,7 @@ The following functions are available to calculat the current root reinforcement
 - `calc_cr_fbm`: calculate the current root reinforcement according to the FBM model at each value of strain (discrete root classes)
 - `calc_cr_fbmw`: calculate the current root reinforcement according to the FBMw model at each value of strain (discrete root classes)
 
-To generate suitable ranges of strains, you could use 
+To generate suitable ranges of strains, you can use:
 
 - `generate_strainrange`: generates a suitable range of strains to analyse the mobilisation of root reinforcement
 - `generate_strainrange_fbm`: generates a suitable range of strains to analyse the mobilisation of root reinforcement for traditional fibre bundle models. It returns strains just before and after each root failure only, to minimise the amount of computations required. 

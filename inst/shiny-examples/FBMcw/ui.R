@@ -6,10 +6,13 @@
 
 #make UI
 ui <- shiny::navbarPage(
-  "FBMc/FBMcw",
+  title = "FBMc/FBMcw",
+  position = "fixed-top",
+  collapsible = TRUE,
 
   shiny::tabPanel(
     "Analysis",
+    tags$style(type="text/css", "body {padding-top: 70px;}"),
 
     #FIRST ROW - MOBILISATION
     shiny::fluidRow(
@@ -156,8 +159,10 @@ ui <- shiny::navbarPage(
     )
   ),
 
+  #TAB: DOCUMENTATION
   shiny::tabPanel(
     "Documentation",
+    tags$style(type="text/css", "body {padding-top: 70px;}"),
     shiny::withMathJax(),
     shiny::includeMarkdown('www/FBMc_documentation.rmd')
   )

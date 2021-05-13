@@ -1,17 +1,20 @@
 ---
-title: "FBMc/FBMcw App documentation"
-author: "Gerrit Meijer"
-date: "09/04/2021"
+title: "FBMc/FBMcw app documentation"
+author: "G. J. Meijer"
+date: "13/05/2021"
 output: html_document
-bibliography: References_BibTeX.bib
 ---
 
 
-# Generic fibre bundle models for root reinforcement of soil
+# FBMc/FBMcw: Generic fibre bundle models for root reinforcement of soil
 
-This application demonstrates root reinforcement predictions according to the generic fibre bundle models (FBMc, FBMcw) developed by Meijer (2021).
+v0.1.0 - 13/05/2021
 
-This interactive application is intended to rapidly and easily explore  the effect of various root biomechanical parameters, root area ratio parameters and load sharing rules on mobilisation and magnitude of root reinforcement. It is intended only for academic and non-commercial uses. Please cite the Meijer (2021) publication when using the model. For any question or comments, please contact <gjm36@bath.ac.uk>
+This application demonstrates root reinforcement predictions according to the generic fibre bundle models (FBMc, FBMcw) developed by Meijer (2021):
+
+> G.J. Meijer. (2021). Generic form of fibre bundle models for soil reinforcement by plant roots. Plant & Soil x(x):x-x. DOI:x
+
+This interactive application is intended to rapidly and easily explore the effect of various root biomechanical parameters, root area ratio parameters and load sharing rules on mobilisation and magnitude of root reinforcement. It is intended only for academic and non-commercial uses. Please cite the Meijer (2021) publication when using the model. For any question or comments, please contact <gjm36@bath.ac.uk>
 
 G.J. Meijer (University of Bath), April 2021
 
