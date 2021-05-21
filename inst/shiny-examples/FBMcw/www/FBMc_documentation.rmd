@@ -6,7 +6,7 @@ output: html_document
 ---
 
 
-# FBMc/FBMcw: Generic fibre bundle models for root reinforcement of soil
+# FBMc/FBMcw: Generic form of fibre bundle models for soil reinforcement by plant roots
 
 This application demonstrates root reinforcement predictions according to the generic fibre bundle models (FBMc, FBMcw) developed by Meijer (2021):
 
