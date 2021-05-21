@@ -35,7 +35,7 @@ generate_loadsharingrules <- function(betat=NULL, betaE=NULL, betaL=NULL, betaep
   d <- rbind(
     d,
     data.frame(
-      loadsharing = c('FBM-N', 'FBM-Dia', 'FBM-S'),
+      loadsharing = c('FBM \u03b2<sub>F</sub>=0', 'FBM \u03b2<sub>F</sub>=1', 'FBM \u03b2<sub>F</sub>=2'),
       betaF = c(0, 1, 2)
     )
   )

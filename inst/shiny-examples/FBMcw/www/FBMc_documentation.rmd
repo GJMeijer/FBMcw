@@ -53,7 +53,10 @@ The plot shows how the root reinforcement is mobilised as function of strain. Th
 
 ## Plot 2: Comparison of load sharing rules
 
-This plot explores how the predicted (reduction in) peak root reinforcement varies as function of the load sharing mechanism assumed. Calculations are performed both for the FBMc and FBMcw. 
+This plot explores how the predicted (reduction in) peak root reinforcement varies as function of:
+
+1. The **generic form** of the model, e.g. 'FBMc' (continuous distribution of roots) or 'FBMcw' (continuous distribution of roots + Weibull survival functions)
+2. The **load sharing mechanism** adopted within the generic form of the model
 
 Many existing load sharing mechanisms are included:
 

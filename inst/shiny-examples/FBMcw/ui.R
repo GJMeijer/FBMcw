@@ -41,7 +41,7 @@ ui <- shiny::navbarPage(
             "betat",
             label = HTML(paste0("Tensile strength power coefficient (\u03b2", tags$sub("t"), ")", sep='')),
             min = -2,
-            value = -0.7,
+            value = -0.2,
             max = 2,
             step = 0.1
           ),
@@ -79,7 +79,7 @@ ui <- shiny::navbarPage(
             "betaE",
             label = HTML(paste0("Root stiffess power coefficient (\u03b2", tags$sub("E"), ")", sep='')),
             min = -2,
-            value = -0.2,
+            value = -0.1,
             max = 2,
             step = 0.1
           ),
@@ -147,7 +147,7 @@ ui <- shiny::navbarPage(
             "nc",
             label = HTML(paste0("Number of discrete diameter classes (n", tags$sub("c"), ")", sep='')),
             min = 1,
-            value = 5,
+            value = 3,
             max = 25,
             step = 1
           )
