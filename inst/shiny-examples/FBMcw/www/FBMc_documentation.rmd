@@ -10,7 +10,7 @@ output: html_document
 
 This application demonstrates root reinforcement predictions according to the generic fibre bundle models (FBMc, FBMcw) developed by Meijer (2021):
 
-> G.J. Meijer. 2021. "Generic form of fibre bundle models for soil reinforcement by plant roots". Plant & Soil x(x):xx-xx. DOI:xxx
+> G.J. Meijer. 2021. "A generic form of fibre bundle models for root reinforcement of soil". Plant & Soil x(x):xx-xx. DOI:xxx
 
 This interactive application is intended to rapidly and easily explore the effect of various root biomechanical parameters, root area ratio parameters and load sharing rules on mobilisation and magnitude of root reinforcement. Please cite the above publication when using the model or its source code. For any question or comments, please contact <gjm36@bath.ac.uk>.
 
@@ -58,7 +58,7 @@ This plot explores how the predicted (reduction in) peak root reinforcement vari
 1. The **generic form** of the model, e.g. 'FBMc' (continuous distribution of roots) or 'FBMcw' (continuous distribution of roots + Weibull survival functions)
 2. The **load sharing mechanism** adopted within the generic form of the model
 
-Many existing load sharing mechanisms are included:
+Many existing load sharing mechanisms are included (for full details, please see Meijer 2021):
 
 - **WWM**: ($\beta_F=2+\beta_t$)
     
@@ -80,15 +80,15 @@ Many existing load sharing mechanisms are included:
 
     Equal root elongation is assumed in each root. Tensile strain is constant along the entire root length, which may vary as function of the root diameter according to a power law.
     
-- **FBM-WN**: ($\beta_F=2\beta_t-\beta_E$)
+- **FBM-WN**: ($\beta_F=2+0.5\beta_E$)
 
     The same amount of mechanical work (defined as energy per unit volume of root) is applied to each root, regardless of diamater.
 
-- **FBM-WDia**: ($\beta_F=1+2\beta_t-\beta_E$)
+- **FBM-WDia**: ($\beta_F=2.5+0.5\beta_E$)
 
     The mechanical work is applied proportionally to the diameter of each root.
 
-- **FBM-WS**: ($\beta_F=2+2\beta_t-\beta_E$) 
+- **FBM-WS**: ($\beta_F=3+0.5\beta_E$) 
 
     The mechanical work is applied proportionally to the cross-sectional area of each root.
     

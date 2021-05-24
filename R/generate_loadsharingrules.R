@@ -56,7 +56,7 @@ generate_loadsharingrules <- function(betat=NULL, betaE=NULL, betaL=NULL, betaep
     #calulate values - energy models and waldron
     d2 <- data.frame(
       loadsharing = c('FBM-WN', 'FBM-WDia', 'FBM-WS', 'Waldron'),
-      betaF = c(2*betat-betaE, 1+2*betat-betaE, 2+2*betat-betaE, 1.5+0.5*betaE)
+      betaF = c(2.0+0.5*betaE, 2.5+0.5*betaE, 3.0+0.5*betaE, 1.5+0.5*betaE)
     )
     d <- rbind(d,d2)
   }

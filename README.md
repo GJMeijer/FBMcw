@@ -88,4 +88,4 @@ You should have received a copy of the GNU General Public License along with thi
 
 ## References
 
-Meijer, G. J. 2021. "Generic Form of Fibre Bundle Models for Soil Reinforcement by Plant Roots." Plant & Soil x(x):xx-xx. DOI:xxx
+Meijer, G. J. 2021. "A Generic Form of Fibre Bundle Models for Root Reinforcement of Soil." Plant & Soil x(x):xx-xx. DOI:xxx
